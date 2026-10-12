@@ -1,19 +1,104 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title>The Eras Wardrobe - Taylor Swift Fashion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>About me</h1>
-   <P>My name is Anushka Sharma and I am a btech student .</P> 
-   <br>
-   <p>I like ice cream.</p>
-   <br>
-   <p>I like to listen to music and watch movies.</p>
-   <br>
-   <img src="https://i.pinimg.com/236x/0c/11/82/0c1182d5b237ea83402f66b08d1a18af.jpg" alt="Cutiee" width="500" height="500">
-   <hr>
+
+    <header>
+        <div class="logo">The Eras Wardrobe</div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Taylor's Fashion Eras</h1>
+            <p>Explore gorgeous outfit inspiration inspired by your favorite albums!</p>
+            <a href="#collections" class="btn">Shop The Eras</a>
+        </div>
+        <div class="hero-image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVakvD5aF28vkoeCkqG7XIGQIYWcxpcUqfU3KAECOJ0CtwbOLUZoKHag&s=10" alt="Taylor Swift Era Fashion Inspiration">
+        </div>
+    </section>
+
+    <section id="collections">
+        <h2 class="section-title">Era Outfit Collections</h2>
+        <div class="catalog">
+            
+            
+            <div class="card">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/taylor-swift-cardigan-1595566198.jpg?crop=0.7298747763864043xw:1xh;center,top&resize=1200:*" alt="Lover Pastel Cardigan">
+                <h3>Folklore Pastel Cardigan</h3>
+                <p>Cozy pastel knit sweater with dreamy pastel pink and blue hues.</p>
+                <div class="price">Rs.6700</div>
+                <button class="btn">Add to Bag</button>
+            </div>
+
+            
+            <div class="card">
+                <img src="https://people.com/thmb/HZw3l8ptkDraplQni-E0-hM7Qxs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(767x227:769x229)/taylor-swift-101824-2-8dc56c5085124a6ebba4a8e6e5142457.jpg" alt="Reputation Black Bodysuit">
+                <h3>Reputation Snake Bodysuit</h3>
+                <p>Edgy black asymmetric bodysuit with sleek snake details.</p>
+                <div class="price">Rs.8500</div>
+                <button class="btn">Add to Bag</button>
+            </div>
+
+            
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT19EphcLjf6pTkaevehRxwZRdaXg8HcwR-sgxj3MUGhKAVuvcq3_pJ8Uc&s=10" alt="Fearless Gold Fringe Dress">
+                <h3>Fearless Gold Fringe Dress</h3>
+                <p>Shimmering gold fringe dress made for dancing all night long.</p>
+                <div class="price">Rs.9000</div>
+                <button class="btn">Add to Bag</button>
+            </div>
+
+            
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFcUpkgEoyEzxgQGsISln2KPdeT4yGaujrqhyCD_yqyENFPRt0My0HaEkZ&s=10" alt="Midnights Sequin Blazer">
+                <h3>Midnights Sequin Dress</h3>
+                <p>Midnight blue sparkly dress inspired by starry night skies.</p>
+                <div class="price">Rs.9500</div>
+                <button class="btn">Add to Bag</button>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section id="about" class="about">
+        <h2>About This MSE Project</h2>
+        <p>This website is a HTML and CSS project. It's themed around Taylor Swift's iconic eras.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Request an Era Outfit</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email Address" required>
+            <select>
+                <option value="lover">Lover Era</option>
+                <option value="reputation">Reputation Era</option>
+                <option value="fearless">Fearless Era</option>
+                <option value="midnights">Midnights Era</option>
+            </select>
+            <textarea placeholder="Your Message or Custom Request" rows="4"></textarea>
+            <button type="submit" class="btn">Send Request</button>
+        </form>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2026 The Eras Wardrobe. Built with HTML & External CSS for School Project.</p>
+    </footer>
+
 </body>
 </html>

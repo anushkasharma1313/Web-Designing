@@ -1,163 +1,213 @@
-:root {
-  --bg: #0b0f19;
-  --card-bg: rgba(23, 32, 54, 0.7);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-}
+/* STREAMING_CHUNK:Setting up basic reset and color variables... /
+/ Basic CSS Reset */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--bg);
-  color: var(--text-main);
-  padding: 2rem 1rem;
-  display: flex;
-  justify-content: center;
+font-family: Arial, sans-serif;
+background-color: #fcf6f9;
+color: #333333;
+line-height: 1.6;
 }
 
-.container {
-  max-width: 850px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* STREAMING_CHUNK:Styling header and navigation bar... /
+/ Header Styles */
+header {
+background-color: #2c1654;
+color: white;
+padding: 20px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
-.glow-bg {
-  position: fixed;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
-  filter: blur(80px);
-  z-index: -1;
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+color: #f7cac9;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+margin-left: 25px;
+font-size: 16px;
+}
+
+.nav-links a:hover {
+color: #f7cac9;
+}
+
+/* STREAMING_CHUNK:Styling hero banner section... /
+/ Hero Section */
+.hero {
+background-color: #f7cac9;
+padding: 60px 40px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.hero-content {
+max-width: 500px;
+}
+
+.hero-content h1 {
+font-size: 38px;
+color: #2c1654;
+margin-bottom: 15px;
+}
+
+.hero-content p {
+font-size: 18px;
+color: #555555;
+margin-bottom: 25px;
+}
+
+.hero-image-container img {
+width: 100%;
+max-width: 450px;
+height: 320px;
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* STREAMING_CHUNK:Styling section headers and product catalog cards... /
+/ Collections / Catalog Section */
+.section-title {
+text-align: center;
+font-size: 30px;
+color: #2c1654;
+margin: 50px 0 30px 0;
+}
+
+.catalog {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 25px;
+padding: 0 20px;
 }
 
 .card {
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 2rem;
+background-color: white;
+border: 1px solid #e0d5ec;
+border-radius: 8px;
+width: 260px;
+padding: 15px;
+text-align: center;
+box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
-h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+.card img {
+width: 100%;
+height: 240px;
+object-fit: cover;
+border-radius: 6px;
+margin-bottom: 15px;
 }
 
-p {
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-/* Hero */
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+.card h3 {
+font-size: 18px;
+color: #2c1654;
+margin-bottom: 8px;
 }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #6366f1;
+.card p {
+font-size: 13px;
+color: #666666;
+margin-bottom: 12px;
 }
 
-.highlight {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.price {
+font-size: 16px;
+font-weight: bold;
+color: #bfa15f;
+margin-bottom: 15px;
 }
 
-.badges {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.badge {
-  font-size: 0.75rem;
-  padding: 0.2rem 0.6rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  color: var(--text-muted);
-}
-
-/* 2-Column Grid & Skills */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.skill-tag {
-  background: rgba(99, 102, 241, 0.15);
-  color: #c7d2fe;
-  padding: 0.35rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-}
-
-.item-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.95rem;
-}
-
-.item-meta {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
-
-/* Buttons */
-.links-group {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
+/* STREAMING_CHUNK:Styling buttons, about, and contact form... /
+/ Reusable Button Style */
 .btn {
-  text-decoration: none;
-  padding: 0.6rem 1.1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
+background-color: #2c1654;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
 }
 
-.btn-primary {
-  background: var(--accent-gradient);
-  color: #fff;
+.btn:hover {
+background-color: #4a287a;
 }
 
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-main);
+/* About Section */
+.about {
+background-color: #e9e2f5;
+padding: 50px 20px;
+text-align: center;
+margin-top: 60px;
 }
-@media (max-width: 650px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .badges, .links-group {
-    justify-content: center;
-  }
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
+
+.about h2 {
+color: #2c1654;
+margin-bottom: 15px;
+font-size: 26px;
+}
+
+.about p {
+max-width: 650px;
+margin: 0 auto;
+color: #444444;
+}
+
+/* Contact / Order Section */
+.contact-section {
+padding: 50px 20px;
+text-align: center;
+background-color: #ffffff;
+}
+
+.contact-section h2 {
+color: #2c1654;
+margin-bottom: 20px;
+font-size: 26px;
+}
+
+.contact-form {
+max-width: 450px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+width: 100%;
+}
+
+/* Footer Style */
+footer {
+background-color: #2c1654;
+color: white;
+text-align: center;
+padding: 25px;
+margin-top: 40px;
+font-size: 14px;
 }
